@@ -1,0 +1,65 @@
+@charset "UTF-8";
+@media screen and (max-width: 739px) {
+  main {
+    padding-top: 200px;
+  }
+}
+@media screen and (min-width: 740px) {
+  main {
+    padding-top: 100px;
+  }
+}
+
+#favorites {
+  margin-bottom: 4vw;
+  text-align: left;
+  font-size: 1rem;
+}
+#favorites span:last-child {
+  text-align: right;
+}
+#favorites > div {
+  display: grid;
+  grid-template: auto/20px 1fr 70px;
+  align-items: center;
+  min-height: 65px;
+  border-top: 1px solid rgba(244, 244, 244, 0.1);
+  transition: all 0.3s;
+}
+@media screen and (max-width: 740px) {
+  #favorites > div {
+    grid-gap: 20px;
+  }
+}
+@media screen and (min-width: 740px) {
+  #favorites > div {
+    padding: 0 15px;
+    grid-gap: 20px;
+  }
+}
+#favorites > div:hover {
+  border-radius: 5px;
+  background-color: rgba(244, 244, 244, 0.1);
+}
+#favorites > div::before {
+  text-align: center;
+}
+#favorites > div div p {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  opacity: 0.7;
+  letter-spacing: 2px;
+}
+#favorites > div a:hover {
+  text-decoration: underline;
+}
+
+button::after {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #e3502b;
+}
+button:hover::after {
+  color: #e3502b;
+}
