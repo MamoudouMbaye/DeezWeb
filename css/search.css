@@ -1,0 +1,206 @@
+@charset "UTF-8";
+section:first-child {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 739px) {
+  section:first-child {
+    min-height: calc(100vh - 140px);
+    flex-direction: column;
+    padding-bottom: 30px;
+  }
+}
+@media screen and (min-width: 740px) {
+  section:first-child {
+    min-height: calc(100vh - 90px);
+  }
+}
+section:first-child > div:first-child {
+  min-width: 250px;
+  width: 35%;
+  margin-right: 4vw;
+}
+section:first-child > div:first-child img {
+  object-fit: cover;
+}
+section:first-child > div:nth-child(2) {
+  margin-top: 4vw;
+}
+section:first-child > div:nth-child(2) #searchBlock {
+  margin-top: 80px;
+  height: 45px;
+}
+
+#search-bar_container {
+  display: inline-block;
+  padding: 5px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #f4f4f4;
+  text-align: center;
+  white-space: nowrap;
+}
+#search-bar_container::before {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 0.8rem;
+  margin-right: 5px;
+}
+
+select#dw-select {
+  padding: 0 5px;
+  height: 30px;
+  color: #151515;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  font-family: "Lato", sans-serif;
+}
+@media screen and (max-width: 419px) {
+  select#dw-select {
+    display: block;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 420px) {
+  select#dw-select {
+    margin: 0 15px;
+  }
+}
+
+#cards-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: -12px 0 4vw -12px;
+  width: calc(100% + 12px);
+}
+#cards-list > div {
+  display: grid;
+  border-radius: 12px;
+  border: 1px solid rgba(244, 244, 244, 0.1);
+  margin: 12px 0 0 12px;
+  padding: 4px;
+  box-sizing: content-box;
+}
+@media screen and (max-width: 513px) {
+  #cards-list > div {
+    width: 282px;
+  }
+}
+@media screen and (min-width: 514px) {
+  #cards-list > div {
+    min-width: 220px;
+    width: 17vw;
+  }
+}
+#cards-list > div > div {
+  z-index: 1;
+  grid-row: 1;
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+@media screen and (max-width: 513px) {
+  #cards-list > div > div {
+    height: 282px;
+  }
+}
+@media screen and (min-width: 514px) {
+  #cards-list > div > div {
+    min-height: 220px;
+    height: 17vw;
+  }
+}
+#cards-list > div > div a::after {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  height: 46px;
+  background-color: white;
+  color: #e99d3e;
+  font-size: 3rem;
+  border-radius: 50%;
+  transition: color 0.3s;
+  font-size: 3rem;
+  box-shadow: 0 0 12px #151515;
+}
+#cards-list > div > div a:hover::after {
+  color: #e3502b;
+}
+#cards-list > div:hover > div {
+  opacity: 1;
+  background-color: rgba(21, 21, 21, 0.8);
+}
+#cards-list figure {
+  grid-row: 1;
+  grid-column: 1;
+  position: relative;
+}
+@media screen and (max-width: 513px) {
+  #cards-list figure {
+    width: 282px;
+  }
+}
+@media screen and (min-width: 514px) {
+  #cards-list figure {
+    min-width: 220px;
+    width: 17vw;
+  }
+}
+#cards-list figure img {
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 4px;
+  border-radius: 8px 8px 0 0;
+}
+@media screen and (max-width: 513px) {
+  #cards-list figure img {
+    width: 282px;
+  }
+}
+@media screen and (min-width: 514px) {
+  #cards-list figure img {
+    min-width: 220px;
+    width: 17vw;
+  }
+}
+#cards-list figure figcaption {
+  padding: 8px 8px 0;
+}
+#cards-list figure figcaption h3 {
+  line-height: 120%;
+}
+#cards-list figure figcaption span {
+  display: block;
+  font-size: 0.9rem;
+  margin: 16px 0 4px;
+  opacity: 0.7;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#cards-list figure figcaption span a:hover {
+  text-decoration: underline;
+}
+#cards-list figure button {
+  position: absolute;
+  z-index: 1;
+  bottom: 4px;
+  right: 8px;
+}
+#cards-list figure button::after {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+}
+#cards-list figure button:hover::after {
+  color: #e3502b;
+}

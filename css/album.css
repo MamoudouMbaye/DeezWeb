@@ -1,0 +1,99 @@
+section:first-child {
+  display: flex;
+  align-items: center;
+  min-height: 65vh;
+}
+@media screen and (max-width: 739px) {
+  section:first-child {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 439px) {
+  section:first-child > div:first-child {
+    width: 100vw;
+    margin: 0 -4vw 40px;
+  }
+}
+@media screen and (min-width: 440px) {
+  section:first-child > div:first-child {
+    min-width: 294px;
+    width: 30%;
+  }
+}
+@media screen and (max-width: 739px) {
+  section:first-child > div:first-child {
+    margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 740px) {
+  section:first-child > div:first-child {
+    margin-right: 4vw;
+  }
+}
+section:first-child > div:first-child img {
+  width: 100%;
+}
+section:first-child > div:nth-child(2) {
+  line-height: 180%;
+}
+section:first-child > div:nth-child(2) h2 {
+  margin: 10px 0;
+}
+section:first-child > div:nth-child(2) span {
+  opacity: 0.7;
+}
+section:first-child > div:nth-child(2) a:hover {
+  text-decoration: underline;
+}
+@media screen and (max-width: 739px) {
+  section:first-child > div:nth-child(2) a#search-button {
+    margin: 0 auto;
+  }
+}
+
+section:nth-child(2) div:first-child,
+#track-list > div {
+  display: grid;
+  grid-template: auto/30px 1fr 70px;
+  grid-gap: 20px;
+  align-items: center;
+  padding-right: 10px;
+  height: 65px;
+}
+section:nth-child(2) div:first-child span:last-child,
+#track-list > div span:last-child {
+  text-align: right;
+}
+
+section:nth-child(2) > div:first-child {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  opacity: 0.7;
+}
+section:nth-child(2) > div:first-child span:first-child {
+  text-align: center;
+}
+
+#track-list {
+  margin-bottom: 4vw;
+  text-align: left;
+  font-size: 1rem;
+  counter-reset: section;
+}
+#track-list div {
+  border-top: 1px solid rgba(244, 244, 244, 0.1);
+  transition: all 0.3s;
+}
+#track-list div:hover {
+  border-radius: 5px;
+  background-color: rgba(244, 244, 244, 0.1);
+}
+#track-list div::before {
+  content: counter(section);
+  counter-increment: section;
+  text-align: center;
+}
+#track-list div a:hover {
+  text-decoration: underline;
+}
