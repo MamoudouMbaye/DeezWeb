@@ -53,7 +53,7 @@ document.querySelector("#search-button")
                 
                 // Button qui renvoie à la page de la track
                     newCardLinks.innerHTML += `
-                        <a href="pages/track.html?id=${trackId}"></a>
+                        <a href="/track.html?id=${trackId}"></a>
                     `;
 
                 // Fav button
